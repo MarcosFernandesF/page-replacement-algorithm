@@ -6,12 +6,6 @@ namespace algorithms
 {
 	public class Relogio
 	{
-		private class Pagina
-		{
-			public int Numero { get; set; }
-			public bool Referenciada { get; set; }
-		}
-
 		private int NumeroDeQuadros { get; set; }
 		private List<int> PaginasReferenciadas { get; set; }
 		private List<Pagina> Memoria { get; set; }
@@ -93,6 +87,7 @@ namespace algorithms
 
 		private void AvancarPonteiro()
 		{
+			// Pegar o resto garante que o ponteiro volte ao início depois de passar pela última posição.
 			Ponteiro = (Ponteiro + 1) % NumeroDeQuadros;
 		}
 	}

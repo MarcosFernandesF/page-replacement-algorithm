@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Runtime.InteropServices;
 
 namespace algorithms
 {
@@ -25,7 +23,7 @@ namespace algorithms
 
 			Console.WriteLine("FIFO:");
             Console.WriteLine($"Page Faults - {fifoPageFaults}");
-            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
 			sw.Reset();
 
 			Relogio relogio = new Relogio(paginasReferenciadas, numeroDeQuadros);
@@ -36,7 +34,18 @@ namespace algorithms
 
             Console.WriteLine("Relógio:");
             Console.WriteLine($"Page Faults - {relogioPageFaults}");
-            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
+            sw.Reset();
+
+            NRU nru = new NRU(paginasReferenciadas, numeroDeQuadros);
+
+            sw.Start();
+            int nruPageFaults = nru.ObterPageFaults();
+            sw.Stop();
+
+            Console.WriteLine("Relógio:");
+            Console.WriteLine($"Page Faults - {nruPageFaults}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
             sw.Reset();
         }
 	}
