@@ -10,7 +10,8 @@ namespace algorithms
 		static void Main(string[] args)
 		{
 			int numeroDeQuadros = 64;
-			List<int> paginasReferenciadas = Enumerable.Range(0, 100000)
+            int numeroDePaginas = 100000;
+			List<int> paginasReferenciadas = Enumerable.Range(0, numeroDePaginas)
                                             .Select(_ => new Random().Next(0, 256))
                                             .ToList();
 
@@ -21,20 +22,31 @@ namespace algorithms
 			int fifoPageFaults = fifo.ObterPageFaults();
 			sw.Stop();
 
-			Console.WriteLine("FIFO:");
+			Console.WriteLine("-FIFO:");
             Console.WriteLine($"Page Faults - {fifoPageFaults}");
-            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms\n");
 			sw.Reset();
 
-			Relogio relogio = new Relogio(paginasReferenciadas, numeroDeQuadros);
+            SegundaChance segundaChance = new SegundaChance(paginasReferenciadas, numeroDeQuadros);
+
+            sw.Start();
+            int segundaChancePageFaults = segundaChance.ObterPageFaults();
+            sw.Stop();
+
+            Console.WriteLine("-Segunda Chance:");
+            Console.WriteLine($"Page Faults - {segundaChancePageFaults}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms\n");
+            sw.Reset();
+
+            Relogio relogio = new Relogio(paginasReferenciadas, numeroDeQuadros);
 
             sw.Start();
             int relogioPageFaults = relogio.ObterPageFaults();
             sw.Stop();
 
-            Console.WriteLine("Relógio:");
+            Console.WriteLine("-Relógio:");
             Console.WriteLine($"Page Faults - {relogioPageFaults}");
-            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms\n");
             sw.Reset();
 
             NRU nru = new NRU(paginasReferenciadas, numeroDeQuadros);
@@ -43,10 +55,21 @@ namespace algorithms
             int nruPageFaults = nru.ObterPageFaults();
             sw.Stop();
 
-            Console.WriteLine("Relógio:");
+            Console.WriteLine("-NRU:");
             Console.WriteLine($"Page Faults - {nruPageFaults}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms\n");
+            sw.Reset();
+
+            LRU lru = new LRU(paginasReferenciadas, numeroDeQuadros);
+
+            sw.Start();
+            int lruPageFaults = lru.ObterPageFaults();
+            sw.Stop();
+
+            Console.WriteLine("-LRU:");
+            Console.WriteLine($"Page Faults - {lruPageFaults}");
             Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds} ms");
             sw.Reset();
         }
-	}
+    }
 }

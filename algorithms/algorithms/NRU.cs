@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace algorithms
 {
@@ -77,7 +78,7 @@ namespace algorithms
 
         private bool PaginaEstaNaMemoria(int numeroPagina)
         {
-            return Memoria.Exists(p => p.Numero == numeroPagina);
+            return Memoria.Any(p => p.Numero == numeroPagina);
         }
 
         private void AdicionarPaginaNaMemoria(int numeroPagina, bool referenciada, bool modificada)
