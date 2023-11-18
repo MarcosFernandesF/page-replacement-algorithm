@@ -16,17 +16,28 @@ namespace algorithms
                                             .Select(_ => new Random().Next(0, 256))
                                             .ToList();
 
-            FIFO algoritmoFifo = new FIFO(paginasReferenciadas, numeroDeQuadros);
+            FIFO fifo = new FIFO(paginasReferenciadas, numeroDeQuadros);
 
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
-			int fifoPageFaults = algoritmoFifo.ObterPageFaults();
+			int fifoPageFaults = fifo.ObterPageFaults();
 			sw.Stop();
 
 			Console.WriteLine("FIFO:");
             Console.WriteLine($"Page Faults - {fifoPageFaults}");
             Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds}");
 			sw.Reset();
+
+			Relogio relogio = new Relogio(paginasReferenciadas, numeroDeQuadros);
+
+            sw.Start();
+            int relogioPageFaults = relogio.ObterPageFaults();
+            sw.Stop();
+
+            Console.WriteLine("Relógio:");
+            Console.WriteLine($"Page Faults - {relogioPageFaults}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds}");
+            sw.Reset();
         }
 	}
 }
