@@ -1,0 +1,13 @@
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.deps.json
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.runtimeconfig.json
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.runtimeconfig.dev.json
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.dll
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.pdb
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.csproj.AssemblyReference.cache
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.AssemblyInfoInputs.cache
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.AssemblyInfo.cs
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.csproj.CoreCompileInputs.cache
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.dll
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.pdb
+C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.genruntimeconfig.cache
