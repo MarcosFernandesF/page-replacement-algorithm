@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 
 namespace algorithms
@@ -8,14 +11,22 @@ namespace algorithms
 	{
 		static void Main(string[] args)
 		{
-			int numeroDeQuadros = 5;
-			List<int> paginasReferenciadas = new List<int> { 1, 3, 10, 3, 20, 245, 12, 1, 4, 5, 4, 7, 210 };
+			int numeroDeQuadros = 64;
+			List<int> paginasReferenciadas = Enumerable.Range(0, 100000)
+                                            .Select(_ => new Random().Next(0, 256))
+                                            .ToList();
 
             FIFO algoritmoFifo = new FIFO(paginasReferenciadas, numeroDeQuadros);
 
+			Stopwatch sw = new Stopwatch();
+			sw.Start();
 			int fifoPageFaults = algoritmoFifo.ObterPageFaults();
+			sw.Stop();
 
-            Console.WriteLine($"FIFO Page Faults: {fifoPageFaults}");
+			Console.WriteLine("FIFO:");
+            Console.WriteLine($"Page Faults - {fifoPageFaults}");
+            Console.WriteLine($"Tempo de execução total - {sw.Elapsed.TotalMilliseconds}");
+			sw.Reset();
         }
 	}
 }
