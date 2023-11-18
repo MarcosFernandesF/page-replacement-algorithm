@@ -9,6 +9,8 @@ namespace algorithms
         private List<int> PaginasReferenciadas { get; set; }
         private List<Pagina> Memoria { get; set; }
         private int PageFaults { get; set; }
+        private int PeriodoDeReset { get; set; }
+        private int ContadorDeReset { get; set; }
         private Random random;
 
         public NRU(List<int> paginasReferenciadas, int numeroDeQuadros)
@@ -17,6 +19,8 @@ namespace algorithms
             PaginasReferenciadas = paginasReferenciadas;
             Memoria = new List<Pagina>();
             PageFaults = 0;
+            PeriodoDeReset = paginasReferenciadas.Count / 5;
+            ContadorDeReset = 0;
             random = new Random();
         }
 
@@ -41,6 +45,13 @@ namespace algorithms
                 {
                     AtualizarReferencia(pagina);
                     AtualizarModificadaAleatoriamente();
+                }
+
+                ContadorDeReset++;
+                if (ContadorDeReset >= PeriodoDeReset)
+                {
+                    ResetaBitDeReferencia();
+                    ContadorDeReset = 0;
                 }
             }
 
@@ -132,6 +143,11 @@ namespace algorithms
         private void RemoverPaginaDaMemoria(Pagina pagina)
         {
             Memoria.Remove(pagina);
+        }
+
+        private void ResetaBitDeReferencia()
+        {
+            Memoria.ForEach(pagina => pagina.Referenciada = false);
         }
     }
 }
