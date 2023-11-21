@@ -11,9 +11,15 @@ namespace algorithms
 		{
 			int numeroDeQuadros = 64;
 			int numeroDePaginas = 100000;
+			int paginasEnderecaveis = 128;
+			//SEQUENCIA ALEATÓRIA
+			// List<int> paginasReferenciadas = Enumerable.Range(0, numeroDePaginas)
+			// 								.Select(_ => new Random().Next(0, paginasEnderecaveis))
+			// 								.ToList();
+			//SEQUENCIA LINEAR
 			List<int> paginasReferenciadas = Enumerable.Range(0, numeroDePaginas)
-											.Select(_ => new Random().Next(0, 256))
-											.ToList();
+                                            .Select(i => i % paginasEnderecaveis)
+                                            .ToList();
 
 			ExecutandoFIFO(numeroDeQuadros, paginasReferenciadas);
 

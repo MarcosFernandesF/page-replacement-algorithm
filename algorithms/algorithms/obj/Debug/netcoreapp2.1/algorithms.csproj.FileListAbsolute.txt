@@ -11,3 +11,17 @@ C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\a
 C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.dll
 C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.pdb
 C:\Users\Marcos Fernandes\Desktop\page-replacement\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.genruntimeconfig.cache
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.deps.json
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.runtimeconfig.json
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.runtimeconfig.dev.json
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.dll
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\bin\Debug\netcoreapp2.1\algorithms.pdb
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.csproj.AssemblyReference.cache
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.AssemblyInfoInputs.cache
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.AssemblyInfo.cs
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.csproj.CoreCompileInputs.cache
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.sourcelink.json
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.dll
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.pdb
+C:\Users\josev\OneDrive\Documentos\Estudos\UFSC\Programacao\page-replacement-algorithms\algorithms\algorithms\obj\Debug\netcoreapp2.1\algorithms.genruntimeconfig.cache
